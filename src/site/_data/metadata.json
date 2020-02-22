@@ -1,18 +1,18 @@
 {
-  "title": "Candy",
-  "url": "https://candy-11ty.netlify.com/",
-  "sitemap": "https://candy-11ty.netlify.com/sitemap.xml",
-  "twitter": "@wernersiemens",
+  "title": "Living Life",
+  "url": "https://nostalgic-candy-torvalds-0a.netlify.com/",
+  "sitemap": "https://nostalgic-candy-torvalds-0a.netlify.com/sitemap.xml",
+  "twitter": "@papplegate",
   "feed": {
-    "subtitle": "Candy is a quick-start scaffold for building sites. It's Eleventy with sugar on top.",
+    "subtitle": "Living life and writing some things down along the way.",
     "filename": "feed.xml",
     "path": "/feed.xml",
-    "url": "https://candy-11ty.netlify.com/feed.xml",
-    "id": "https://candy-11ty.netlify.com/"
+    "url": "https://nostalgic-candy-torvalds-0a.netlify.com/feed.xml",
+    "id": "https://nostalgic-candy-torvalds-0a.netlify.com/"
   },
   "author": {
-    "name": "Werner Siemens",
-    "email": "stickhandle@gmail.com",
-    "twitter": "@wernersiemens"
+    "name": "Paul Applegate",
+    "email": "me@paulapplegate.com",
+    "twitter": "@papplegate"
   }
 }
