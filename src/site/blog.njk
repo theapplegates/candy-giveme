@@ -1,0 +1,22 @@
+---
+permalink: /blog/
+title: Blog
+layout: layouts/page.njk
+---
+{% set cls = cycler("odd", "even") %}
+{%- for post in collections.stsop %}
+<div class="blog-list-item {{ cls.next() }}">
+    <div class="row">
+        {% if post.data.mainImageFilename -%}
+            {% if cls.current == 'odd' -%}
+                {% include "blog-item-odd.njk" -%}
+            {% else -%}
+                {% include "blog-item-even.njk" -%}
+            {% endif -%}
+        {% else -%}
+            {% include "blog-item-noimage.njk" -%}
+        {% endif -%}
+    </div>
+</div>
+{%- endfor %}
+

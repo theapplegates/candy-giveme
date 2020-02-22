@@ -1,0 +1,29 @@
+<div class="col-8">
+    <div class="row">
+        <div class="col">
+            <h3><a class="title-href" href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col postline">
+            <div class="tags">
+                {% for tag in post.data.tags -%}
+                    {% if tag != "untagged" -%}
+                    {% if loop.first %}<i class="fas fa-tags"></i>{% endif -%}
+                    {%- if tag != "star" -%}
+                        <div><a href="/tags/#{{ tag }}" class="tag">#{{ tag }}</a></div>
+                    {% endif -%}
+                    {% endif -%}
+                {% endfor -%}
+                {%- if 'star' in post.data.tags -%}
+                    <div><a href="/tags/#{{ tag }}" class="tag"><i class="far fa-star"></i></a></div>
+                {%- endif -%}
+            </div>
+            <div class="postdate">
+                <i class="fas fa-calendar-day"></i>
+                <div>Last updated on {{ post.date | formatDisplayDate }}</div>
+            </div>
+        </div>
+    </div>
+{% include "blog-item-excerpt.njk" -%}
+</div>

@@ -1,0 +1,90 @@
+---
+permalink: /tags/
+title: List of Tags
+layout: layouts/base.njk
+contentContainerClass: container
+---
+<div class="row"><h1>List of Tags</h1></div>
+<div class="row tag-counter-list">
+  {% for tagKey, tagVal in collections.tagList %}
+    {% set tagUrl %}/tags/#{{ tagKey }}{% endset %}
+    <div class="col-4 taglist-item">
+      <i class="fas fa-tag"></i>
+      <a href="{{ tagUrl | url }}" class="tag">{% if tagKey == "star" -%}<i class="far fa-star"></i>{% else %}#{% endif %}{{ tagKey }}</a>
+      <div class="tag-counter">{{ tagVal }}</div>
+    </div>
+  {% endfor %}
+</div>
+<div class="row separator"><div class="zig-zag"></div></div>
+<div class="tag-list">
+  {% for tag, pages in collections.tagListPosts %}
+    <div class="row">
+      <a name="{{tag}}"><div class="header-spacer"></div></a>
+    </div>
+    <div class="row">
+      <h2>{% if tag == "star" -%}<i class="far fa-star"></i>{% else %}#{% endif %}{{tag}}</h2>
+    </div>
+    {% for page in pages %}
+        <div class="row taglistpost-item">
+            <div class="col-3 main-image">
+              <a href="{{ page.url }}">
+                {% if page.data.mainImageFilename %}
+                  <img src="/images/{{ page.data.mainImageFilename }}-{{ page.data.thumbImageSize }}.{{ page.data.mainImageExt }}" alt="{{ page.data.mainImageTitle | safe }}" title="{{ page.data.mainImageTitle | safe }}">
+                {% else %}
+                  <img src="/images/no_image-400.jpg" alt="no image available" title="no image available">
+                {% endif %}
+              </a>
+          </div>
+          <div class="col-9">
+            <div class="row">
+              <div class="col">
+                <h3><a href="{{ page.url }}">{{ page.data.title }}</a></h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col postline">
+                  <div class="tags">
+                    {% for tag in page.data.tags -%}
+                        {% if tag != "untagged" -%}
+                        {% if loop.first %}<i class="fas fa-tags"></i>{% endif -%}
+                        {%- if tag != "star" -%}
+                            <div><a href="/tags/#{{ tag }}" class="tag">#{{ tag }}</a></div>
+                        {% endif -%}
+                        {% endif -%}
+                    {% endfor -%}
+                    {%- if 'star' in page.data.tags -%}
+                        <div><a href="/tags/#{{ tag }}" class="tag"><i class="far fa-star"></i></a></div>
+                    {%- endif -%}
+                  </div>
+                  <div class="postdate">
+                    <i class="fas fa-calendar-day"></i>
+                    <div>Last updated on {{ page.date | formatDisplayDate }}</div>
+                  </div>
+              </div>
+            </div>
+            {% if page.data.excerpt == "auto" -%}
+                <div class="row">
+                    <div class="col excerpt">{{ page.templateContent | striptags(true) | truncate(150) | safe }}
+                        <div class="more"><a href="{{ page.url }}"><i class="far fa-arrow-alt-circle-right"></i></a></div>
+                    </div>
+                </div>
+            {% elif page.data.excerpt == "comment" -%}
+            <div class="row">
+                <div class="col excerpt">{{ page.templateContent | excerpt | striptags(true) | safe }}
+                    <div class="more"><a href="{{ page.url }}"><i class="far fa-arrow-alt-circle-right"></i></a></div>
+                </div>
+            </div>
+            {% elif page.data.excerpt == "custom" -%}
+                {% if page.data.customExcerpt -%}
+                <div class="row">
+                    <div class="col excerpt">{{ page.data.customExcerpt | safe }}
+                        <div class="more"><a href="{{ page.url }}"><i class="far fa-arrow-alt-circle-right"></i></a></div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+          </div>
+        </div>
+    {% endfor %}
+  {% endfor %}
+</div>

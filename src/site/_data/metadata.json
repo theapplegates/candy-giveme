@@ -1,0 +1,18 @@
+{
+  "title": "Candy",
+  "url": "https://candy-11ty.netlify.com/",
+  "sitemap": "https://candy-11ty.netlify.com/sitemap.xml",
+  "twitter": "@wernersiemens",
+  "feed": {
+    "subtitle": "Candy is a quick-start scaffold for building sites. It's Eleventy with sugar on top.",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "url": "https://candy-11ty.netlify.com/feed.xml",
+    "id": "https://candy-11ty.netlify.com/"
+  },
+  "author": {
+    "name": "Werner Siemens",
+    "email": "stickhandle@gmail.com",
+    "twitter": "@wernersiemens"
+  }
+}

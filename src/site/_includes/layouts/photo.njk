@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+bodyClass: candy-photo
+templateEngineOverride: njk, md
+contentContainerClass: container
+---
+<div class="row">
+  <div class="col">
+    <h1 class="title">{{ title }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col postline">
+    <div class="tags">
+      {% for tag in tags -%}
+        {% if tag != "untagged" -%}
+          {% if loop.first %}<i class="fas fa-tags"></i>{% endif -%}
+          {%- if tag != "star" -%}
+            <div><a href="/tags/#{{ tag }}" class="tag">#{{ tag }}</a></div>
+          {% endif -%}
+        {% endif -%}
+      {% endfor -%}
+      {%- if 'star' in tags -%}
+        <div><a href="/tags/#{{ tag }}" class="tag"><i class="far fa-star"></i></a></div>
+      {%- endif -%}
+    </div>
+    <div class="postdate">
+      <i class="fas fa-calendar-day"></i>
+      <div>Last updated on {{ page.date | formatDisplayDate }}</div>
+    </div>
+  </div>
+</div>
+{% if mainImageFilename %}
+  {% if not mainImageTitle  %}
+    {% set mainImageTitle = mainImageFilename %}
+  {% endif %}
+  {% if not mainImageAltText  %}
+    {% set mainImageAltText = mainImageTitle %}
+  {% endif %}
+  <div class="row">
+    <div class="col main-image">
+      <img src="/images/{{ mainImageFilename }}-{{ mainImageSize }}.{{ mainImageExt }}" alt="{{ mainImageAltText | safe }}" title="{{ mainImageTitle | safe }}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col photoline">
+      <div>{{ mainImageTitle | safe }}</div>
+    </div>
+  </div>
+  <div class="row next-prev-row">
+    <div class="col-6" style="padding-right: 0px">{% include "photo-previous.njk" -%}</div>
+    <div class="col-6" style="padding-left: 0px">{% include "photo-next.njk" -%}</div>
+  </div>
+{% endif %}

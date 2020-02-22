@@ -1,0 +1,17 @@
+@mixin bp($point) {
+  @if $point == xs {
+    @media #{$bp-xs} { @content; }
+  }
+  @else if $point == sm {
+    @media #{$bp-sm} { @content; }
+  }
+  @else if $point == md {
+    @media #{$bp-md}  { @content; }
+  }
+  @else if $point == lg {
+    @media #{$bp-lg} { @content; }
+  }
+  @else if $point == xl {
+    @media #{$bp-xl}  { @content; }
+  }
+}

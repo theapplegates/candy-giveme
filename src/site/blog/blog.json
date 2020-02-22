@@ -1,0 +1,11 @@
+{
+  "layout" : "layouts/post.njk",
+  "tags" : ["untagged"],
+  "mainImageExt" : "jpg",
+  "mainImageSize" : "1600",
+  "medImageSize" : "800",
+  "thumbImageSize" : "400",
+  "tinyImageSize" : "200",
+  "excerpt": "auto",
+  "similarScore" : 0
+}

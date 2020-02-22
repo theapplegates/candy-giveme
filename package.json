@@ -1,0 +1,45 @@
+{
+  "name": "candy-11ty",
+  "version": "1.0.0",
+  "description": "Candy is a quick-start scaffold for building sites. It's Eleventy with sugar on top.",
+  "author": "Werner Siemens",
+  "license": "MIT",
+  "scripts": {
+    "eleventy": "gulp eleventy",
+    "start": "yarn run build && yarn run serve",
+    "watch": "yarn run build && yarn run watcher",
+    "build": "gulp build",
+    "build:local": "gulp build:local",
+    "watcher": "gulp watcher",
+    "serve": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stickhandle/candy-11ty"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy-plugin-rss": "^1.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
+    "concurrent-transform": "^1.0.0",
+    "debug": "^4.1.1",
+    "gravatar": "^1.6.0",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-shell": "^0.6.5",
+    "gulp-uglify": "^3.0.0",
+    "luxon": "^1.9.0",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-footnote": "^3.0.1",
+    "netlify-lambda": "^0.2.0",
+    "pump": "^3.0.0",
+    "require-dir": "^1.0.0"
+  }
+}
