@@ -13,7 +13,8 @@ tags:
 An old post on a new blog.
 
 The US postal service has a nice program that lets users read letters for Santa from children in the US. It's pretty simple. You read letters kids send to Santa and decide which one you want to make come true. You then mail your present to them by Dec 21. Now this got fucked up the minute the postal service got involved. I understand they are the ones who get the letters from Santa, but come on. We all know the postal service sucks. Why did they not "export" this important service to an external company? I've been trying to register for the past 40 min and only get a server error message.
-![ID](https://res.cloudinary.com/paulportfolio/image/upload/c_fit,q_auto,f_auto,dpr_auto/v1575111691/ghost/IMG_3335.png)
+
+![ID](/images/usps-verify.jpg)
 
 It's so infuriating dealing with them.
 
