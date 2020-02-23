@@ -5,6 +5,5 @@
   "mainImageSize" : "1600",
   "medImageSize" : "800",
   "thumbImageSize" : "400",
-  "tinyImageSize" : "200",
-  "smallestImageSize" : "100"
+  "tinyImageSize" : "200"
 }
