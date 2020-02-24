@@ -2,8 +2,10 @@
   "layout" : "layouts/photo.njk",
   "tags" : ["untagged"],
   "mainImageExt" : "jpg",
+  "xlargeImageSize" : "3200",
   "mainImageSize" : "1600",
   "medImageSize" : "800",
   "thumbImageSize" : "400",
-  "tinyImageSize" : "200"
+  "tinyImageSize" : "200",
+  "supertinyImageSize" : "150"
 }
