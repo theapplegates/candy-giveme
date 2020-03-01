@@ -1,11 +1,9 @@
 ---
-layout: layouts/post-rsidebar.njk
-title: Sample Demo Post
-headTitlePost: "| Candy"
+title: Another demo post
 date: 2020-03-01
 tags:
-    - markdown
     - demo
+    - markdown
 ---
 ## Intro
 
