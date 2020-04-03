@@ -14,7 +14,7 @@ contentContainerClass: container
     <div class="tags">
       {% for tag in tags -%}
         {% if tag != "untagged" -%}
-          {% if loop.first %}<i class="fas fa-tags"></i>{% endif -%}
+          {% if loop.first %}<i class=“fas fa-calendar-alt”></i>{% endif -%}
           {%- if tag != "star" -%}
             <div><a href="/tags/#{{ tag }}" class="tag">#{{ tag }}</a></div>
           {% endif -%}
